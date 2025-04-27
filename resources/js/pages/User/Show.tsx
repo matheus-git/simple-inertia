@@ -3,10 +3,10 @@ import { Head } from '@inertiajs/react'
 
 export default function Welcome({ user }) {
   return (
-    <>
+    <Layout>
       <Head title="Welcome" />
-      <h1 className="text-gray-700">Welcome</h1>
-      <p>Hello {user}, welcome to your first Inertia app!</p>
-    </>
+      <h1>Welcome</h1>
+      <p>Hello {user.name}, welcome to your first Inertia app!</p>
+    </Layout>
   )
 }

@@ -157,3 +157,7 @@
         @apply bg-background text-foreground;
     }
 }
+
+#app {
+    flex: 1 1 0%;
+}
