@@ -8,7 +8,15 @@ export default function Index({ users }) {
         {
             users.map(user =>
                 <div key={user.id} className="flex items-center justify-between gap-4 p-2 border-b">
-                  <p className="text-white-800">{user.name}</p>
+                  <p className="text-white-800">({user.id}) {user.name}</p>
+                  <Link
+                    href={`/users/${user.id}/edit`}
+                    method="get"
+                    as="button"
+                    className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition"
+                  >
+                    Editar
+                  </Link>
                   <Link
                     href={`/users/${user.id}`}
                     method="delete"
