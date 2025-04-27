@@ -5,6 +5,14 @@ import { Link } from '@inertiajs/react'
 export default function Index({ users }) {
   return (
     <Layout>
+        <div className="mb-4">
+            <Link
+              href="/users/create"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+            >
+              Criar Novo Usuário
+            </Link>
+        </div>
         {
             users.map(user =>
                 <div key={user.id} className="flex items-center justify-between gap-4 p-2 border-b">
