@@ -6,6 +6,7 @@ export default function Create() {
   const [values, setValues] = useState({
     name: "",
     email: "",
+    password: ""
   })
 
   function handleChange(e) {
@@ -40,6 +41,16 @@ export default function Create() {
             <input
               id="email"
               value={values.email}
+              onChange={handleChange}
+              className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="password" className="mb-1 text-sm font-medium text-gray-700">Password:</label>
+            <input
+              id="password"
+              value={values.password}
               onChange={handleChange}
               className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
