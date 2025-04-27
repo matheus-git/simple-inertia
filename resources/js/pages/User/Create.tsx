@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { router } from '@inertiajs/react'
 import Layout from './Layout';
+import { useRemember } from '@inertiajs/react'
 
 export default function Create() {
-  const [values, setValues] = useState({
+  const [values, setValues] = useRemember({
     name: "",
     email: "",
     password: ""

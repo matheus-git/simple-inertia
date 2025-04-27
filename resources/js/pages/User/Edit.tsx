@@ -3,9 +3,10 @@ import { Head } from '@inertiajs/react'
 import { Link } from '@inertiajs/react'
 import { useState } from 'react'
 import { router } from '@inertiajs/react'
+import { useRemember } from '@inertiajs/react'
 
 export default function Edit({ user }) {
-      const [values, setValues] = useState({
+      const [values, setValues] = useRemember({
         name: user.name,
         email: user.email,
         password: user.password || ""
