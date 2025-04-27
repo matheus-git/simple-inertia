@@ -38,7 +38,7 @@ class UserController extends Controller
             'password' => $request->password
         ]);
 
-        to_route('users.index');
+        return to_route('users.index');
     }
 
     /**
@@ -73,6 +73,8 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        User::destroy($id);
+
+        return to_route("users.index");
     }
 }
